@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memoria Matemática 🎀</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🎀 Memoria Matemática</h1>
+      <p>Encuentra la operación y su resultado. ¡Rápido!</p>
+    </header>
+
+    <section class="controls">
+      <label>Selecciona dificultad:</label>
+      <div class="difs">
+        <button class="dif-btn" data-dif="easy">Fácil</button>
+        <button class="dif-btn" data-dif="medium">Medio</button>
+        <button class="dif-btn" data-dif="hard">Difícil</button>
+      </div>
+
+      <div class="start-area">
+        <button id="startBtn" class="start">Iniciar juego</button>
+      </div>
+    </section>
+
+    <section class="info">
+      <div>⏳ Tiempo: <span id="tiempo">60</span>s</div>
+      <div>⭐ Puntos: <span id="puntos">0</span></div>
+    </section>
+
+    <section id="tablero" class="tablero" aria-live="polite"></section>
+  </main>
+
+  <!-- Popup final -->
+  <div id="popup" class="popup oculto" role="dialog" aria-modal="true">
+    <div class="popup-contenido">
+      <h2>Resultado</h2>
+      <p><strong>Jugador 1</strong></p>
+      <p>Puntaje: <span id="puntosFinales">0</span></p>
+      <p>Tiempo gastado: <span id="tiempoGastado">0</span>s</p>
+      <div class="popup-actions">
+        <button id="repetir">Jugar otra vez</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
