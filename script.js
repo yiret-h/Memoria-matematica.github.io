@@ -134,7 +134,7 @@ el.innerHTML = `
   cartasDOM.forEach(carta => carta.classList.add('volteada'));
   setTimeout(() => {
       cartasDOM.forEach(carta => carta.classList.remove('volteada'));
-  }, 15000);
+  }, 8000);
 
   // tiempo
   tiempoRestante = initialTime;
@@ -226,5 +226,6 @@ function finalizarJuego(gano=false){
   tiempoGastadoEl.textContent = tiempoGastado;
   popup.classList.remove('oculto');
 }
+
 
 
