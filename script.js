@@ -33,9 +33,9 @@ difBtns.forEach(btn => {
     difBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     dificultad = btn.dataset.dif;
-    if(dificultad === 'easy'){ paresCount = 4; initialTime = 30; }
-    if(dificultad === 'medium'){ paresCount = 8; initialTime = 40; }
-    if(dificultad === 'hard'){ paresCount = 12; initialTime = 50; }
+    if(dificultad === 'easy'){ paresCount = 4; initialTime = 40; }
+    if(dificultad === 'medium'){ paresCount = 8; initialTime = 50; }
+    if(dificultad === 'hard'){ paresCount = 12; initialTime = 60; }
   });
 });
 // dejar medio activo al inicio
@@ -55,8 +55,8 @@ function generarPares(n){
 
   while(pares.length < n){
     const op = ops[Math.floor(Math.random()*ops.length)];
-    let a = Math.floor(Math.random()*12)+1; // 1..12
-    let b = Math.floor(Math.random()*12)+1;
+    let a = Math.floor(Math.random()*9)+1; // 1..9
+    let b = Math.floor(Math.random()*9)+1;
 
     // para division, asegurar divisible
     if(op === '/'){
@@ -134,7 +134,7 @@ el.innerHTML = `
   cartasDOM.forEach(carta => carta.classList.add('volteada'));
   setTimeout(() => {
       cartasDOM.forEach(carta => carta.classList.remove('volteada'));
-  }, 3000);
+  }, 15000);
 
   // tiempo
   tiempoRestante = initialTime;
@@ -226,4 +226,5 @@ function finalizarJuego(gano=false){
   tiempoGastadoEl.textContent = tiempoGastado;
   popup.classList.remove('oculto');
 }
+
 
