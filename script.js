@@ -33,9 +33,9 @@ difBtns.forEach(btn => {
     difBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     dificultad = btn.dataset.dif;
-    if(dificultad === 'easy'){ paresCount = 4; initialTime = 40; }
-    if(dificultad === 'medium'){ paresCount = 8; initialTime = 50; }
-    if(dificultad === 'hard'){ paresCount = 12; initialTime = 60; }
+    if(dificultad === 'easy'){ paresCount = 4; initialTime = 60; }
+    if(dificultad === 'medium'){ paresCount = 8; initialTime = 80; }
+    if(dificultad === 'hard'){ paresCount = 12; initialTime = 90; }
   });
 });
 // dejar medio activo al inicio
@@ -226,6 +226,7 @@ function finalizarJuego(gano=false){
   tiempoGastadoEl.textContent = tiempoGastado;
   popup.classList.remove('oculto');
 }
+
 
 
 
